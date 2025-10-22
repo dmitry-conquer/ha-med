@@ -1,0 +1,46 @@
+@use "../helpers" as *;
+
+.dark-di {
+  padding-block: fluid(40, 80);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: rem(24) rem(53);
+
+    @include medium {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__images {
+    flex: 0 1 rem(803);
+    display: flex;
+    align-items: flex-end;
+    column-gap: fluid(10, 33);
+
+    @include medium {
+      flex: 0 1 auto;
+    }
+  }
+
+  &__image {
+    img {
+      border-radius: rem(8);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    flex: 0 1 rem(620);
+
+    @include medium {
+      flex: 0 1 auto;
+    }
+  }
+}
