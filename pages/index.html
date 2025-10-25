@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   </head>
   <body>
     <div id="page" class="site-page">
@@ -11,7 +12,7 @@
         <section class="base-hero" style="background-image: url(&quot;/images/hero.png&quot;)">
           <div class="base-hero__container section-container">
             <h1>Home Health Physical Therapy | In-Home PT for Seniors & Adults</h1>
-            <p>
+            <p class="text-base">
               When getting back on your feet feels overwhelming, in-home physical therapy brings expert care to you. In
               Miami-Dade and Broward counties, home health PT helps seniors and adults rebuild strength, balance, and
               mobility after illness, injury, or surgery; recover from joint replacement or stroke; manage pain; and
@@ -27,7 +28,7 @@
               <div class="dark-di__image"><img src="/images/big1.png" alt="" /></div>
               <div class="dark-di__image"><img src="/images/small1.png" alt="" /></div>
             </div>
-            <div class="dark-di__content">
+            <div class="dark-di__content text-base">
               <p>
                 If you're looking for licensed physical therapists, consider Home Advantage Home Health Agency. Our team
                 delivers compassionate, evidence-based care at home across Miami-Dade and Broward counties. We create
@@ -47,17 +48,135 @@
                 <p class="dynamic-slider__subheading">Here are the most important benefits of bringing PT home:</p>
               </div>
               <div class="dynamic-slider__right">
-                <p class="dynamic-slider__text">
+                <p class="dynamic-slider__text text-base">
                   When recovery feels daunting, healing gets easier when expert care meets you at your front door. In
                   Miami-Dade and Broward counties, home health physical therapy turns your living space into a safe,
                   supportive place to rebuild strength and confidence.
                 </p>
               </div>
             </div>
+            <div class="dynamic-slider__body">
+              <div class="dynamic-slider__main">
+                <div class="dynamic-slider__current-container" id="current-description">
+                  <div class="dynamic-slider__current current-active" data-current>
+                    <div class="dynamic-slider__current-image">
+                      <img src="/images/1.png" alt="" />
+                    </div>
+                    <div class="dynamic-slider__current-content">
+                      <h3 class="dynamic-slider__current-title">Comfort and Convenience at Home</h3>
+                      <p class="dynamic-slider__current-text">
+                        Therapy comes to you, which reduces stress, saves energy, and removes transportation and weather
+                        barriers. In your own familiar space, sessions feel calmer and less intimidating, so you can
+                        focus on healing. Being at home also supports consistent attendance and lets you rest right
+                        after therapy, making recovery more manageable.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="dynamic-slider__current" data-current>
+                    <div class="dynamic-slider__current-image">
+                      <img src="/images/2.png" alt="" />
+                    </div>
+                    <div class="dynamic-slider__current-content">
+                      <h3 class="dynamic-slider__current-title">Highly Personalized, Goal-Driven Care</h3>
+                      <p class="dynamic-slider__current-text">
+                        Personalized care means you get the right exercises and techniques to reach your goals. Whether
+                        you're recovering from a joint replacement, managing pain, or working on balance and mobility,
+                        your therapist creates a plan that fits your needs and helps you progress safely. This tailored
+                        approach keeps you motivated and engaged in your recovery.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="dynamic-slider__current" data-current>
+                    <div class="dynamic-slider__current-image">
+                      <img src="/images/3.png" alt="" />
+                    </div>
+                    <div class="dynamic-slider__current-content">
+                      <h3 class="dynamic-slider__current-title">Comfort and Convenience at Home</h3>
+                      <p class="dynamic-slider__current-text">
+                        Therapy comes to you, which reduces stress, saves energy, and removes transportation and weather
+                        barriers. In your own familiar space, sessions feel calmer and less intimidating, so you can
+                        focus on healing. Being at home also supports consistent attendance and lets you rest right
+                        after therapy, making recovery more manageable.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="dynamic-slider__current" data-current>
+                    <div class="dynamic-slider__current-image">
+                      <img src="/images/4.png" alt="" />
+                    </div>
+                    <div class="dynamic-slider__current-content">
+                      <h3 class="dynamic-slider__current-title">Highly Personalized, Goal-Driven Care</h3>
+                      <p class="dynamic-slider__current-text">
+                        Personalized care means you get the right exercises and techniques to reach your goals. Whether
+                        you're recovering from a joint replacement, managing pain, or working on balance and mobility,
+                        your therapist creates a plan that fits your needs and helps you progress safely. This tailored
+                        approach keeps you motivated and engaged in your recovery.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="dynamic-slider__slider swiper-slider" id="dynamic-slider">
+                  <div class="dynamic-slider__wrapper swiper-wrapper">
+                    <div class="dynamic-slider__slide swiper-slide">
+                      <div class="dynamic-slider__slide-image">
+                        <img src="/images/1.png" alt="" />
+                      </div>
+                      <h3 class="dynamic-slider__slide-title">Highly Personalized, Goal-Driven Care</h3>
+                    </div>
+                    <div class="dynamic-slider__slide swiper-slide">
+                      <div class="dynamic-slider__slide-image">
+                        <img src="/images/2.png" alt="" />
+                      </div>
+                      <h3 class="dynamic-slider__slide-title">Improved Safety and Fall Prevention</h3>
+                    </div>
+                    <div class="dynamic-slider__slide swiper-slide">
+                      <div class="dynamic-slider__slide-image">
+                        <img src="/images/3.png" alt="" />
+                      </div>
+                      <h3 class="dynamic-slider__slide-title">Highly Personalized, Goal-Driven Care</h3>
+                    </div>
+                    <div class="dynamic-slider__slide swiper-slide">
+                      <div class="dynamic-slider__slide-image">
+                        <img src="/images/4.png" alt="" />
+                      </div>
+                      <h3 class="dynamic-slider__slide-title">Improved Safety and Fall Prevention</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="dynamic-slider__navigation">
+                <button
+                  aria-label="Previous"
+                  type="button"
+                  class="dynamic-slider__navigation-button dynamic-slider__navigation-button--prev"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M11.5 12.8316L5.00754 19.4838C4.78476 19.712 4.51424 19.8262 4.19598 19.8262C3.87772 19.8262 3.6072 19.712 3.38442 19.4838L2.33417 18.3588C2.11139 18.1305 2 17.8533 2 17.5273C2 17.2012 2.11139 16.924 2.33417 16.6957L6.91709 12.0001L2.33417 7.30443C2.11139 7.07617 2 6.799 2 6.47291C2 6.14683 2.11139 5.86965 2.33417 5.64139L3.38442 4.51639C3.6072 4.28813 3.87772 4.174 4.19598 4.174C4.51424 4.174 4.78476 4.28813 5.00754 4.51639L11.5 11.1686C11.7228 11.3968 11.8342 11.674 11.8342 12.0001C11.8342 12.3262 11.7228 12.6033 11.5 12.8316ZM20.6658 11.1686C20.8886 11.3968 21 11.674 21 12.0001C21 12.3262 20.8886 12.6033 20.6658 12.8316L14.1734 19.4838C13.9506 19.712 13.6801 19.8262 13.3618 19.8262C13.0436 19.8262 12.773 19.712 12.5503 19.4838L11.5 18.3588C11.2772 18.1305 11.1658 17.8533 11.1658 17.5273C11.1658 17.2012 11.2772 16.924 11.5 16.6957L16.0829 12.0001L11.5 7.30443C11.2772 7.07617 11.1658 6.799 11.1658 6.47291C11.1658 6.14683 11.2772 5.86965 11.5 5.64139L12.5503 4.51639C12.6776 4.41856 12.8128 4.33704 12.956 4.27183C13.0992 4.20661 13.2425 4.174 13.3857 4.174C13.5289 4.174 13.6721 4.20661 13.8153 4.27183C13.9585 4.33704 14.0779 4.41856 14.1734 4.51639L20.6658 11.1686Z"
+                      fill="#E1303C"
+                    />
+                  </svg>
+                </button>
+                <div class="dynamic-slider__navigation-dots swiper-pagination"></div>
+                <button
+                  aria-label="Next"
+                  type="button"
+                  class="dynamic-slider__navigation-button dynamic-slider__navigation-button--next"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M11.5 12.8316L5.00754 19.4838C4.78476 19.712 4.51424 19.8262 4.19598 19.8262C3.87772 19.8262 3.6072 19.712 3.38442 19.4838L2.33417 18.3588C2.11139 18.1305 2 17.8533 2 17.5273C2 17.2012 2.11139 16.924 2.33417 16.6957L6.91709 12.0001L2.33417 7.30443C2.11139 7.07617 2 6.799 2 6.47291C2 6.14683 2.11139 5.86965 2.33417 5.64139L3.38442 4.51639C3.6072 4.28813 3.87772 4.174 4.19598 4.174C4.51424 4.174 4.78476 4.28813 5.00754 4.51639L11.5 11.1686C11.7228 11.3968 11.8342 11.674 11.8342 12.0001C11.8342 12.3262 11.7228 12.6033 11.5 12.8316ZM20.6658 11.1686C20.8886 11.3968 21 11.674 21 12.0001C21 12.3262 20.8886 12.6033 20.6658 12.8316L14.1734 19.4838C13.9506 19.712 13.6801 19.8262 13.3618 19.8262C13.0436 19.8262 12.773 19.712 12.5503 19.4838L11.5 18.3588C11.2772 18.1305 11.1658 17.8533 11.1658 17.5273C11.1658 17.2012 11.2772 16.924 11.5 16.6957L16.0829 12.0001L11.5 7.30443C11.2772 7.07617 11.1658 6.799 11.1658 6.47291C11.1658 6.14683 11.2772 5.86965 11.5 5.64139L12.5503 4.51639C12.6776 4.41856 12.8128 4.33704 12.956 4.27183C13.0992 4.20661 13.2425 4.174 13.3857 4.174C13.5289 4.174 13.6721 4.20661 13.8153 4.27183C13.9585 4.33704 14.0779 4.41856 14.1734 4.51639L20.6658 11.1686Z"
+                      fill="#E1303C"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
           </div>
         </section>
       </main>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="/src/scripts/main.ts" defer></script>
   </body>
 </html>
