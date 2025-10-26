@@ -1,6 +1,9 @@
 import "../styles/main.scss";
+import AccordionCollection from "./Accordion";
 
 document.addEventListener("DOMContentLoaded", (): void => {
+  new AccordionCollection();
+
   const dynamicSliderElement = document.getElementById("dynamic-slider");
   if (dynamicSliderElement) {
     const currentElements = document.querySelectorAll("[data-current]");

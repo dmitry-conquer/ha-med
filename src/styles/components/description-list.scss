@@ -1,0 +1,123 @@
+@use "../helpers" as *;
+
+.description-list {
+  padding-block: fluid(40, 80);
+
+  &__container {
+  }
+
+  &__header {
+    max-width: rem(936);
+    margin: 0 auto;
+    margin-bottom: fluid(40, 60);
+  }
+
+  &__heading {
+    text-align: center;
+    margin-bottom: rem(16);
+  }
+
+  &__text {
+    text-align: center;
+    font-size: fluid(16, 18);
+    font-weight: 500;
+    line-height: 1.77;
+    margin-bottom: rem(16);
+  }
+
+  &__subtitle {
+    color: var(--light-gray);
+    text-align: center;
+    font-size: fluid(14, 16);
+    font-weight: 700;
+    line-height: 1.14;
+    letter-spacing: rem(3);
+    text-transform: uppercase;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(20, 30);
+  }
+}
+
+.description-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: rem(24) fluid(32, 64);
+  padding-bottom: fluid(20, 30);
+  border-bottom: 1px solid #f6f6f6;
+  align-items: start;
+  cursor: pointer;
+
+  @include medium {
+    grid-template-columns: 1fr;
+  }
+
+  &.is-active {
+    .description-item__content-text {
+      -webkit-line-clamp: unset;
+    }
+    .description-item__content-container {
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__title {
+    display: flex;
+    column-gap: rem(24);
+    align-items: center;
+  }
+
+  &__title-icon {
+    height: fluid(40, 56);
+    flex: 0 0 fluid(40, 56);
+  }
+
+  &__title-text {
+    color: var(--dark-gray);
+    font-size: fluid(20, 24);
+    font-weight: 700;
+    line-height: 1.33;
+  }
+  &__content-container {
+    display: flex;
+    column-gap: rem(46);
+    &::after {
+      content: "";
+      flex-shrink: 0;
+      width: rem(24);
+      height: rem(24);
+      background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M11.168%2011.5%204.516%205.008a1.1%201.1%200%200%201-.342-.812q0-.477.342-.812l1.125-1.05Q5.984%202%206.473%202t.831.334L12%206.917l4.696-4.583Q17.038%202%2017.527%202t.832.334l1.125%201.05q.342.335.342.812t-.342.812L12.83%2011.5a1.15%201.15%200%200%201-.831.334q-.489%200-.832-.334m1.663%209.166A1.15%201.15%200%200%201%2012%2021q-.489%200-.832-.334l-6.652-6.493a1.1%201.1%200%200%201-.342-.811q0-.477.342-.812l1.125-1.05q.343-.334.832-.334t.831.334L12%2016.083l4.696-4.583q.342-.334.831-.334t.832.334l1.125%201.05q.146.192.244.406t.098.43q0%20.214-.098.43a1.2%201.2%200%200%201-.244.357z%22%20fill%3D%22%23E1303C%22%2F%3E%3C%2Fsvg%3E");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @include small {
+        width: rem(20);
+        height: rem(20);
+      }
+    }
+  }
+
+  &__content {
+  }
+
+  &__content-text {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    color: var(--light-gray);
+    font-size: fluid(16, 18);
+    font-weight: 500;
+    line-height: 1.77;
+
+    @include small {
+      line-height: 1.5;
+    }
+  }
+}
