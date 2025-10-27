@@ -82,6 +82,7 @@
     align-items: center;
     column-gap: fluid(24, 54);
     padding: rem(20);
+    height: 100%;
 
     &.current-active {
       display: flex;
@@ -182,6 +183,14 @@
 
     &-button {
       transition: opacity 0.3s ease-in-out;
+      background-color: transparent;
+      width: auto;
+      height: auto;
+
+      &:hover {
+        background-color: transparent;
+      }
+
       &--prev {
         transform: rotate(180deg);
       }
