@@ -11,12 +11,35 @@
     }
   }
 
+  &__content-inner {
+    position: relative;
+    z-index: 2;
+  }
   &__content {
     border-radius: rem(8);
-    background: #f6f6f6;
+    background-color: #f6f6f6;
     padding: fluid(20, 60) fluid(20, 117) fluid(20, 60) fluid(20, 54);
     margin-right: rem(-66);
     flex: 0 1 rem(826);
+    border: rem(1) solid #f6f6f6;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 56%;
+      height: 100%;
+      bottom: 0;
+      left: 0;
+      background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20448%20427%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M446.751%20426.5H8A7.5%207.5%200%200%201%20.5%20419V1.167z%22%20fill%3D%22%23fff%22%20stroke%3D%22%23F6F6F6%22%2F%3E%3C%2Fsvg%3E");
+      background-position: bottom;
+      background-repeat: no-repeat;
+      background-size: contain;
+      z-index: 1;
+
+      @include large {
+        display: none;
+      }
+    }
 
     @include large {
       flex: 0 1 auto;

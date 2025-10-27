@@ -44,6 +44,10 @@
       &:not(:last-of-type) {
         margin-bottom: rem(16);
       }
+
+      strong {
+        color: var(--light-gray);
+      }
     }
   }
 
