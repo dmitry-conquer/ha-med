@@ -59,6 +59,7 @@
     display: flex;
     padding-left: rem(20);
     column-gap: rem(33);
+    align-items: flex-start;
 
     @include large {
       padding-left: 0;
@@ -155,8 +156,8 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        max-height: rem(180);
         transition: transform 0.3s ease-in-out;
+        max-height: rem(200);
       }
     }
     &-title {

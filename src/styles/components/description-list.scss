@@ -4,6 +4,7 @@
   padding-block: fluid(40, 80);
 
   &__container {
+    padding-inline: rem(16);
   }
 
   &__header {
@@ -44,9 +45,9 @@
 
 .description-item {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: rem(24) fluid(32, 64);
-  padding-bottom: fluid(20, 30);
+  grid-template-columns: 53% 47%;
+  gap: rem(24) fluid(24, 32);
+  padding-bottom: fluid(20, 40);
   border-bottom: 1px solid #f6f6f6;
   align-items: start;
   cursor: pointer;
@@ -85,7 +86,7 @@
   }
   &__content-container {
     display: flex;
-    column-gap: rem(46);
+    column-gap: rem(30);
     &::after {
       content: "";
       flex-shrink: 0;
