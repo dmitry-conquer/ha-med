@@ -6,6 +6,10 @@
   background-repeat: no-repeat;
   padding: fluid(40, 185) 0 fluid(40, 154) 0;
 
+  @include large {
+    background-image: none !important;
+  }
+
   h1 {
     color: var(--dark-gray);
     font-size: fluid(36, 80);
