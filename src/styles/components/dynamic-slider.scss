@@ -88,6 +88,9 @@
     &.current-active {
       display: flex;
     }
+    @include large {
+      display: none !important;
+    }
 
     &-image {
       flex: 0 1 rem(370);
@@ -166,6 +169,44 @@
       font-size: fluid(16, 20);
       font-weight: 700;
       line-height: 1.25;
+    }
+    &-text {
+      color: var(--light-gray);
+      font-size: rem(14);
+      font-weight: 500;
+      line-height: 1.64;
+
+      display: none;
+
+      @include large {
+        display: block;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        &.is-expanded {
+          -webkit-line-clamp: unset;
+        }
+      }
+    }
+
+    &-more {
+      display: none;
+
+      @include large {
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        display: block;
+        text-align: right;
+        font-size: rem(14);
+        color: var(--accent) !important;
+
+        &:hover {
+          color: var(--accent);
+          background-color: transparent;
+        }
+      }
     }
   }
 

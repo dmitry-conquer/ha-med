@@ -45,7 +45,7 @@
 
 .description-item {
   display: grid;
-  grid-template-columns: 53% 47%;
+  grid-template-columns: 53% auto;
   gap: rem(24) fluid(24, 32);
   padding-bottom: fluid(20, 40);
   border-bottom: 1px solid #f6f6f6;

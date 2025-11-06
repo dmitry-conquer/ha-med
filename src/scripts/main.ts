@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", (): void => {
       loop: true,
       breakpoints: {
         320: {
-          slidesPerView: 1.2,
+          slidesPerView: 1.1,
           spaceBetween: 20,
         },
         576: {
@@ -67,4 +67,16 @@ document.addEventListener("DOMContentLoaded", (): void => {
       activateCurrentByIndex(previousIndex);
     });
   }
+
+  const readMoreButtons = document.querySelectorAll(".dynamic-slider__slide-more");
+  readMoreButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const parent = button.closest(".dynamic-slider__slide");
+      const text = parent?.querySelector(".dynamic-slider__slide-text");
+      if (text) {
+        text.classList.toggle("is-expanded");
+        button.textContent = text.classList.contains("is-expanded") ? "Read Less" : "Read More";
+      }
+    });
+  });
 });
