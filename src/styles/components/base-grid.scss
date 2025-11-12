@@ -1,0 +1,61 @@
+@use "../helpers" as *;
+
+.base-grid {
+  &__container {
+  }
+
+  &__header {
+    max-width: rem(749);
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(16);
+    margin-bottom: fluid(40, 60);
+  }
+
+  &__heading {
+  }
+
+  &__text {
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(rem(300), 1fr));
+    gap: fluid(12, 33);
+  }
+
+  &__item {
+    border-radius: rem(8);
+    background-color: #fff;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.12);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: fluid(24, 32) rem(16);
+  }
+
+  &__item-icon {
+    width: rem(56);
+    height: rem(56);
+    object-fit: contain;
+    margin-bottom: fluid(16, 24);
+  }
+
+  &__item-title {
+    color: var(--dark-gray);
+    font-size: rem(20);
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: rem(8);
+  }
+
+  &__item-text {
+    color: var(--light-gray);
+    font-size: rem(14);
+    font-weight: 500;
+    line-height: 1.64;
+  }
+}
