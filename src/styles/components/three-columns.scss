@@ -1,0 +1,50 @@
+@use "../helpers" as *;
+
+.three-columns {
+  padding-block: fluid(40, 80);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &__container {
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: fluid(16, 32);
+  }
+
+  &__item {
+    flex: 0 1 calc(33.333% - rem(21.5));
+
+    p {
+      color: var(--light-gray);
+      font-size: rem(18);
+      font-weight: 500;
+      line-height: 1.77;
+
+      a {
+        text-decoration: underline;
+        @include hover {
+          color: var(--accent);
+        }
+      }
+
+      &:not(:last-of-type) {
+        margin-bottom: rem(8);
+      }
+    }
+
+    @include large {
+      flex: 0 1 calc(50% - rem(16));
+      &:last-child {
+        flex: 0 1 100%;
+      }
+    }
+
+    @include small {
+      flex: 0 1 100%;
+    }
+  }
+}
