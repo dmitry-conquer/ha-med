@@ -1,0 +1,68 @@
+@use "../helpers" as *;
+
+.stepsha {
+  padding-block: fluid(40, 80);
+  background-color: var(--dark-gray);
+
+  &__container {
+  }
+
+  &__header {
+    max-width: rem(749);
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(16);
+    margin-bottom: fluid(40, 60);
+  }
+
+  &__heading {
+    color: #fff;
+  }
+
+  &__text {
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: rem(40) fluid(24, 33);
+
+    @include medium {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include x-small {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+  }
+
+  &__item-number {
+    color: rgba(246, 246, 246, 0.05);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgba(246, 246, 246, 0.1);
+    font-size: fluid(80, 150);
+    font-weight: 700;
+    line-height: 1;
+    display: block;
+    margin-bottom: rem(16);
+  }
+
+  &__item-title {
+    color: #fff;
+    font-size: rem(20);
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: rem(8);
+  }
+
+  &__item-text {
+    color: var(--light-gray);
+    font-size: rem(14);
+    font-weight: 500;
+    line-height: 1.64;
+  }
+}
