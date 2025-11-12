@@ -46,6 +46,26 @@
 }
 
 
+.ha-button {
+  width: 100%;
+      color: #fff;
+      text-align: center;
+      font-size: rem(14);
+      font-weight: 600;
+      line-height: 1.42;
+      border-radius: rem(4);
+      border: rem(1) solid var(--accent);
+      background-color: var(--accent);
+      padding: rem(14);
+      display: block;
+      transition: all 0.3s ease;
+
+      @include hover {
+        background-color: #fff;
+        color: var(--accent);
+      }
+}
+
 .slider-custom-pagination {
   display: flex;
   position: static;
