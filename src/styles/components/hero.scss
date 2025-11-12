@@ -4,14 +4,14 @@
   background-position: 60% center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: fluid(40, 185) 0 fluid(40, 154) 0;
+  padding: fluid(40, 150) 0 fluid(40, 125) 0;
 
   @include large {
     padding-block: fluid(40, 60);
+    background-image: none !important;
   }
 
   &__container {
-
     @media (max-width: rem(1440)) {
       max-width: 55%;
       margin-left: 0;
@@ -22,8 +22,49 @@
     }
   }
 
-  @include large {
-    background-image: none !important;
+  &__info {
+    max-width: rem(416);
+    margin-top: fluid(24, 40);
+
+    @include x-small {
+      max-width: 100%;
+    }
+
+    &-phone {
+      width: 100%;
+      color: #fff;
+      text-align: center;
+      font-size: rem(14);
+      font-weight: 600;
+      line-height: 1.42;
+      border-radius: rem(4);
+      border: rem(1) solid var(--accent);
+      background-color: var(--accent);
+      padding: rem(14);
+      display: block;
+      transition: all 0.3s ease;
+      margin-bottom: rem(16);
+
+      @include hover {
+        background-color: #fff;
+        color: var(--accent);
+      }
+    }
+    &-row {
+      display: grid;
+      grid-template-columns: rem(205) rem(179);
+      gap: fluid(8, 32);
+      @include x-small {
+        grid-template-columns: 1fr;
+      }
+
+      p {
+        color: var(--light-gray);
+        font-size: rem(14);
+        font-weight: 500;
+        line-height: 1.5;
+      }
+    }
   }
 
   h1 {
@@ -35,7 +76,7 @@
     margin-bottom: rem(24);
 
     @media (max-width: 1440px) {
-       font-size: fluid(32, 64);
+      font-size: fluid(32, 64);
     }
   }
 

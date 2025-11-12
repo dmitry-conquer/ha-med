@@ -29,3 +29,38 @@
   font-weight: 700;
   line-height: 1.44;
 }
+
+.section-spacer {
+  --spacer-lg: #{rem(80)};
+  --spacer-md: #{rem(60)};
+  --spacer-sm: #{rem(40)};
+
+  height: var(--spacer-lg);
+
+  @include medium {
+    height: var(--spacer-md);
+  }
+  @include small {
+    height: var(--spacer-sm);
+  }
+}
+
+
+.slider-custom-pagination {
+  display: flex;
+  position: static;
+  justify-content: center;
+  column-gap: fluid(8, 16);
+
+  .swiper-pagination-bullet {
+    width: fluid(10, 16);
+    height: fluid(10, 16);
+    background-color: var(--accent);
+    margin: 0 !important;
+    opacity: 0.5;
+    background-color: var(--light-gray);
+    &.swiper-pagination-bullet-active {
+      background-color: var(--accent);
+    }
+  }
+}

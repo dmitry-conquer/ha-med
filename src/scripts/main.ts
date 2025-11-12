@@ -79,4 +79,40 @@ document.addEventListener("DOMContentLoaded", (): void => {
       }
     });
   });
+
+  const threeSliderElements = document.querySelectorAll(".base-three-slider");
+  threeSliderElements.forEach(slider => {
+    //@ts-expect-error - Swiper is not typed
+    new Swiper(slider, {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      pagination: {
+        el: slider.nextElementSibling as HTMLElement,
+        clickable: true,
+      },
+      autoHeight: true,
+      breakpoints: {
+        320: {
+          slidesPerView: 1.1,
+          spaceBetween: 20,
+        },
+        576: {
+          slidesPerView: 1.4,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2.3,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 3.2,
+          spaceBetween: 20,
+        },
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 33,
+        },
+      },
+    });
+  });
 });
