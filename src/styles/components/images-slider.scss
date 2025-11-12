@@ -1,0 +1,102 @@
+@use "../helpers" as *;
+
+.images-slider {
+  &__container {
+  }
+
+  &__header {
+    max-width: rem(749);
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(16);
+    margin-bottom: fluid(40, 60);
+  }
+
+  &__header-title {
+  }
+
+  &__header-text {
+  }
+
+  &__slider {
+    overflow: hidden;
+    padding: rem(12);
+    margin: rem(-12);
+  }
+
+  &__wrapper {
+  }
+
+  &__slide {
+    border-radius: rem(8);
+    background-color: #fff;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.12);
+    padding: rem(20);
+  }
+
+  &__slide-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-height: rem(188);
+    min-height: rem(140);
+    border-radius: rem(8);
+    margin-bottom: rem(16);
+  }
+
+  &__slide-title {
+    color: var(--dark-gray);
+    font-size: rem(20);
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: rem(8);
+    text-align: center;
+  }
+
+  &__slide-text {
+    color: var(--light-gray);
+    text-align: center;
+    font-size: rem(14);
+    font-weight: 500;
+    line-height: 1.64;
+    margin-bottom: fluid(16, 24);
+  }
+
+  &__slide-link {
+    color: var(--accent);
+    text-align: center;
+    font-size: rem(14);
+    font-weight: 600;
+    line-height: 1.42;
+    text-transform: capitalize;
+    padding: rem(14);
+    border-radius: rem(4);
+    border: 1px solid #f6f6f6;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: stretch;
+    align-items: center;
+    column-gap: rem(3);
+    transition: border-color 0.3s ease-in-out;
+    @include hover {
+      border-color: var(--accent);
+    }
+
+    &::after {
+      content: "";
+      background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2211%22%20height%3D%229%22%20viewBox%3D%220%200%2011%209%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M5.33%204.84%201.688%208.559a.6.6%200%200%201-.456.191.6.6%200%200%201-.455-.191l-.59-.63A.64.64%200%200%201%200%207.466.64.64%200%200%201%20.188%207l2.57-2.625L.189%201.75A.64.64%200%200%201%200%201.285.64.64%200%200%201%20.188.82L.777.191A.6.6%200%200%201%201.232%200q.268%200%20.456.191l3.642%203.72a.64.64%200%200%201%20.188.464.64.64%200%200%201-.188.465m5.143-.93a.64.64%200%200%201%20.188.465.64.64%200%200%201-.188.465L6.83%208.559a.6.6%200%200%201-.455.191.6.6%200%200%201-.455-.191l-.59-.63a.64.64%200%200%201-.187-.464A.64.64%200%200%201%205.33%207l2.572-2.625L5.33%201.75a.64.64%200%200%201-.187-.465A.64.64%200%200%201%205.33.82l.59-.629q.107-.081.227-.136A.6.6%200%200%201%206.388%200q.12%200%20.241.055.12.055.201.136z%22%20fill%3D%22%23e1303c%22%2F%3E%3C%2Fsvg%3E");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: rem(11);
+      height: rem(9);
+    }
+  }
+
+  &__pagination {
+    margin-top: fluid(30, 56);
+  }
+}

@@ -80,11 +80,11 @@ document.addEventListener("DOMContentLoaded", (): void => {
     });
   });
 
-  const threeSliderElements = document.querySelectorAll(".base-three-slider");
-  threeSliderElements.forEach(slider => {
+  const iconsSliderElements = document.querySelectorAll(".icons-slider__slider");
+  iconsSliderElements.forEach(slider => {
     //@ts-expect-error - Swiper is not typed
     new Swiper(slider, {
-      slidesPerView: 3,
+      slidesPerView: 4,
       spaceBetween: 30,
       pagination: {
         el: slider.nextElementSibling as HTMLElement,
@@ -110,6 +110,42 @@ document.addEventListener("DOMContentLoaded", (): void => {
         },
         1200: {
           slidesPerView: 4,
+          spaceBetween: 33,
+        },
+      },
+    });
+  });
+
+  const imagesSliderElements = document.querySelectorAll(".images-slider__slider");
+  imagesSliderElements.forEach(slider => {
+    //@ts-expect-error - Swiper is not typed
+    new Swiper(slider, {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      pagination: {
+        el: slider.nextElementSibling as HTMLElement,
+        clickable: true,
+      },
+      autoHeight: true,
+      breakpoints: {
+        320: {
+          slidesPerView: 1.1,
+          spaceBetween: 20,
+        },
+        576: {
+          slidesPerView: 1.4,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2.3,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 2.6,
+          spaceBetween: 20,
+        },
+        1200: {
+          slidesPerView: 3,
           spaceBetween: 33,
         },
       },
