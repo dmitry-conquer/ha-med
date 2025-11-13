@@ -39,6 +39,14 @@
   &__content {
     flex: 0 1 rem(620);
 
+    h2 {
+      color: #fff;
+      font-size: fluid(32, 36);
+      font-weight: 700;
+      line-height: 1.44;
+      margin-bottom: rem(16);
+    }
+
     @include medium {
       flex: 0 1 auto;
     }

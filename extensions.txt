@@ -1,0 +1,25 @@
+
+code --install-extension
+anan.jetbrains-darcula-theme
+benjaminbenais.copilot-theme
+bmewburn.vscode-intelephense-client
+chadalen.vscode-jetbrains-icon-theme
+christian-kohler.path-intellisense
+dbaeumer.vscode-eslint
+devsense.composer-php-vscode
+devsense.intelli-php-vscode
+devsense.phptools-vscode
+devsense.profiler-php-vscode
+diz.ecsstractor-port
+esbenp.prettier-vscode
+formulahendry.auto-rename-tag
+hkeric.theme-anysphere
+kamikillerto.vscode-colorize
+ritwickdey.liveserver
+rokoroku.vscode-theme-darcula
+sdras.night-owl
+smlombardi.slime
+vincaslt.highlight-matching-tag
+visualstudioexptteam.vscodeintellicode
+wix.vscode-import-cost
+xabikos.javascriptsnippets

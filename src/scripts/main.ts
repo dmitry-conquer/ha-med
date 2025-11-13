@@ -90,7 +90,6 @@ document.addEventListener("DOMContentLoaded", (): void => {
         el: slider.nextElementSibling as HTMLElement,
         clickable: true,
       },
-      autoHeight: true,
       breakpoints: {
         320: {
           slidesPerView: 1.1,
@@ -126,7 +125,6 @@ document.addEventListener("DOMContentLoaded", (): void => {
         el: slider.nextElementSibling as HTMLElement,
         clickable: true,
       },
-      autoHeight: true,
       breakpoints: {
         320: {
           slidesPerView: 1.1,

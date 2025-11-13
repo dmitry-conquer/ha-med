@@ -24,8 +24,13 @@
       font-weight: 500;
       line-height: 1.77;
 
+      strong {
+        color: var(--light-gray);
+      }
+
       a {
         text-decoration: underline;
+        color: var(--light-gray);
         @include hover {
           color: var(--accent);
         }

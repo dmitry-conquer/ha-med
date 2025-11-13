@@ -15,7 +15,6 @@
   }
 
   &__image {
-
     @include medium {
       order: 1;
     }
@@ -48,6 +47,9 @@
       font-size: fluid(16, 18);
       font-weight: 500;
       line-height: 1.77;
+      strong {
+        color: var(--light-gray);
+      }
     }
     a {
       margin-top: rem(24);
