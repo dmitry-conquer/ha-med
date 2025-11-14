@@ -1,0 +1,79 @@
+@use "../helpers" as *;
+
+.landing-footer {
+  background-color: var(--dark-gray);
+  overflow: hidden;
+  max-width: rem(2400);
+  margin: 0 auto;
+
+  &__container {
+    max-width: rem(1480);
+    margin: 0 auto;
+    padding: 0 rem(20);
+  }
+
+  &__body {
+    padding-block: fluid(24, 40);
+  }
+
+  &__logo {
+    max-width: rem(229);
+    display: block;
+
+    @include small {
+      margin: 0 auto;
+    }
+  }
+
+  &__bottom {
+    padding: rem(24) 0 rem(17) 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: rem(5) rem(32);
+    position: relative;
+
+    @include small {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 400%;
+      height: rem(1);
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #4c5c68;
+    }
+  }
+
+  &__copyright {
+    color: var(--light-gray);
+    font-size: rem(14);
+    font-weight: 500;
+    line-height: 1.64;
+  }
+
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(5) rem(16);
+
+    color: var(--light-gray);
+    font-size: rem(14);
+    font-weight: 500;
+    line-height: 1.64;
+
+    a {
+      transition: color 0.3s ease;
+      color: var(--light-gray);
+      @include hover {
+        color: var(--accent);
+      }
+    }
+  }
+}

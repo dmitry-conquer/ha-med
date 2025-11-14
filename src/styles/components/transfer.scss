@@ -30,12 +30,13 @@
   &__body {
     display: flex;
     justify-content: space-between;
-    margin-top: fluid(60, 80);
+    margin-top: fluid(30, 80);
     align-items: flex-start;
     gap: rem(32);
 
     @include medium {
       flex-direction: column;
+      align-items: stretch;
     }
   }
 
@@ -68,7 +69,7 @@
         padding: rem(16) rem(24) rem(16) fluid(47, 96);
         color: #fff;
         font-size: fluid(18, 24);
-        font-weight: 700;
+        font-weight: 600;
         line-height: 1.3;
         min-height: rem(72);
         display: flex;
@@ -76,8 +77,10 @@
 
         strong {
           font-size: fluid(24, 36);
-          font-weight: 700;
+          font-weight: 600;
           line-height: 1.1;
+          color: #fff;
+
         }
 
         &::before {
