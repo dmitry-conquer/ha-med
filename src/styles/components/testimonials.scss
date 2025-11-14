@@ -1,0 +1,33 @@
+@use "../helpers" as *;
+
+.testimonials {
+  &__container {
+    max-width: rem(1480);
+    margin: 0 auto;
+    padding: 0 rem(20);
+  }
+
+  &__header {
+    max-width: rem(671);
+    margin: 0 auto fluid(40, 60) auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(16);
+  }
+
+  &__header-title {
+    color: var(--light-gray);
+    font-size: rem(14);
+    font-weight: 700;
+    line-height: 1.14;
+    letter-spacing: rem(3);
+    text-transform: uppercase;
+  }
+
+  &__header-text {
+  }
+
+  &__body {
+  }
+}
