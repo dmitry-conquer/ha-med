@@ -2,6 +2,8 @@
 
 .icons-slider {
   &__container {
+    display: flex;
+    flex-direction: column;
   }
 
   &__header {
@@ -61,6 +63,10 @@
     line-height: 1.64;
     text-align: center;
     flex-grow: 1;
+    a {
+      color: inherit;
+      text-decoration: underline;
+    }
   }
 
   &__pagination {

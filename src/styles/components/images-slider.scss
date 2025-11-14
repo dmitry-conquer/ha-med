@@ -2,6 +2,8 @@
 
 .images-slider {
   &__container {
+    display: flex;
+    flex-direction: column;
   }
 
   &__header {
@@ -69,6 +71,8 @@
   }
 
   &__slide-link {
+    max-width: rem(284);
+    margin: 0 auto;
     color: var(--accent);
     text-align: center;
     font-size: rem(14);
