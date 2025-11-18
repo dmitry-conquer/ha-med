@@ -47,25 +47,24 @@ body {
   }
 }
 
-
 .ha-button {
   width: 100%;
-      color: #fff;
-      text-align: center;
-      font-size: rem(14);
-      font-weight: 600;
-      line-height: 1.42;
-      border-radius: rem(4);
-      border: rem(1) solid var(--accent);
-      background-color: var(--accent);
-      padding: rem(14);
-      display: block;
-      transition: all 0.3s ease;
+  color: #fff;
+  text-align: center;
+  font-size: rem(14);
+  font-weight: 600;
+  line-height: 1.42;
+  border-radius: rem(4);
+  border: rem(1) solid var(--accent);
+  background-color: var(--accent);
+  padding: rem(14);
+  display: block;
+  transition: all 0.3s ease;
 
-      @include hover {
-        background-color: #fff;
-        color: var(--accent);
-      }
+  @include hover {
+    background-color: #fff;
+    color: var(--accent);
+  }
 }
 
 .slider-custom-pagination {
@@ -85,5 +84,14 @@ body {
       background-color: var(--accent);
       opacity: 1;
     }
+  }
+}
+
+.flexible-page #popmake-2794 {
+  top: 50% !important;
+  transform: translatey(-50%);
+  @include large {
+    top: 0% !important;
+    transform: translatey(0%);
   }
 }
