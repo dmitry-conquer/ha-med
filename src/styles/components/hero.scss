@@ -22,6 +22,16 @@
     }
   }
 
+  &__buttons {
+    margin-top: rem(24);
+    display: flex;
+    gap: fluid(8, 16);
+
+    @include x-small {
+      flex-direction: column;
+    }
+  }
+
   &__info {
     max-width: rem(416);
     margin-top: fluid(24, 40);
@@ -32,9 +42,6 @@
 
     &-phone {
       margin-bottom: rem(16);
-
-
-      
     }
     &-row {
       display: grid;
@@ -54,11 +61,16 @@
   }
 
   &__button {
-    margin-top: rem(24);
     width: 100%;
-    max-width: rem(206);
+    min-width: rem(284);
+    max-width: max-content;
     white-space: nowrap;
     cursor: pointer;
+
+    @include small {
+      width: 100%;
+      max-width: 100%;
+    }
   }
 
   h1 {

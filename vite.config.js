@@ -18,7 +18,7 @@ fs.readdirSync(PAGES_DIR).forEach(file => {
     buildInput[name] = path.resolve(PAGES_DIR, file);
   }
 });
-buildInput.main = path.resolve(SRC_DIR, "scripts/main.ts");
+buildInput.script = path.resolve(SRC_DIR, "scripts/main.ts");
 
 // CSS configuration
 const cssConfig = {
@@ -53,6 +53,7 @@ const buildConfig = {
 const plugins = [
   handlebars({
     partialDirectory: COMPONENTS_DIR,
+    reloadOnPartialChange: true,
   }),
   {
     name: "handlebars-watcher",
@@ -75,10 +76,31 @@ const plugins = [
     generateBundle(outputOptions, bundle) {
       Object.keys(bundle).forEach(fileName => {
         const file = bundle[fileName];
-        if (fileName.includes("main.js") && "code" in file) {
+        if (fileName.includes("script.js") && "code" in file) {
           file.code = `(() => {\n${file.code}})();`;
         }
       });
+    },
+  },
+  {
+    name: "flatten-html-output",
+    async writeBundle(outputOptions) {
+      const outDir = outputOptions.dir || "dist";
+      const pagesDir = path.join(outDir, "pages");
+
+      if (!fs.existsSync(pagesDir)) return;
+
+      const htmlFiles = fs.readdirSync(pagesDir).filter(f => f.endsWith(".html"));
+
+      htmlFiles.forEach(file => {
+        const sourcePath = path.join(pagesDir, file);
+        const targetPath = path.join(outDir, file);
+        fs.renameSync(sourcePath, targetPath);
+      });
+
+      if (fs.readdirSync(pagesDir).length === 0) {
+        fs.rmdirSync(pagesDir);
+      }
     },
   },
 ];

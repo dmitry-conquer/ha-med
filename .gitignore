@@ -10,6 +10,7 @@ lerna-debug.log*
 node_modules
 sftp
 dist
+.env
 dist-ssr
 *.local
 NEW_FEATURES.txt

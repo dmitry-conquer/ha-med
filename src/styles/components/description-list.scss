@@ -52,8 +52,17 @@
   align-items: start;
   cursor: pointer;
 
-  @include medium {
-    grid-template-columns: 1fr;
+  &--expanded {
+    cursor: default;
+
+    .description-item__content-text {
+      -webkit-line-clamp: unset;
+    }
+    .description-item__content-container {
+      &::after {
+        display: none;
+      }
+    }
   }
 
   &.is-active {
@@ -65,6 +74,10 @@
         transform: rotate(180deg);
       }
     }
+  }
+
+  @include medium {
+    grid-template-columns: 1fr;
   }
 
   &__title {

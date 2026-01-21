@@ -66,13 +66,12 @@
     font-size: rem(14);
     font-weight: 500;
     line-height: 1.64;
-    margin-bottom: fluid(16, 24);
     flex-grow: 1;
   }
 
   &__slide-link {
     max-width: rem(284);
-    margin: 0 auto;
+    margin: fluid(16, 24) auto 0 auto;
     color: var(--accent);
     text-align: center;
     font-size: rem(14);
