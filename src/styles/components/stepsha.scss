@@ -25,19 +25,24 @@
   }
 
   &__list {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: rem(40) fluid(24, 33);
-
-    @include medium {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    @include x-small {
-      grid-template-columns: 1fr;
-    }
   }
 
   &__item {
+    flex: 0 1 rem(200);
+    min-width: rem(370);
+
+    @include medium {
+      min-width: rem(320);
+    }
+
+    @include small {
+      flex: 0 1 100%;
+      min-width: auto;
+    }
   }
 
   &__item-number {

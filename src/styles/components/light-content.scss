@@ -54,6 +54,9 @@
     flex: 0 1 rem(826);
     overflow: hidden;
     position: relative;
+    display: grid;
+    place-content: center;
+
     &::before {
       content: "";
       position: absolute;

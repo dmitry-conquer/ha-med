@@ -11,12 +11,56 @@
 
   &__list {
     display: flex;
-    flex-wrap: wrap;
     gap: fluid(16, 32);
+
+    @include large {
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
-    flex: 0 1 calc(33.333% - rem(21.5));
+    &:nth-child(1) {
+      flex: 0 1 rem(371);
+    }
+    &:nth-child(2) {
+      flex: 0 1 rem(462);
+    }
+    &:nth-child(3) {
+      flex: 0 1 rem(699);
+    }
+
+    @include large {
+      &:nth-child(1) {
+        flex: 0 1 calc(50% - rem(18));
+      }
+      &:nth-child(2) {
+        flex: 0 1 calc(50% - rem(18));
+      }
+
+      &:nth-child(3) {
+        flex: 0 1 100%;
+      }
+    }
+
+    @include medium {
+      flex: 0 1 100% !important;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      row-gap: rem(8);
+      padding-left: rem(20);
+      margin-bottom: rem(8);
+
+      li {
+        color: var(--light-gray);
+        font-size: fluid(16, 18);
+        font-weight: 500;
+        line-height: 1.77;
+        list-style: disc;
+      }
+    }
 
     p {
       color: var(--light-gray);

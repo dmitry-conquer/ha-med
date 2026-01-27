@@ -30,9 +30,18 @@
   }
 
   &__list {
+    max-width: rem(832);
+    margin-inline: auto;
   }
 
   &__item {
+    padding-bottom: rem(16);
+    border-bottom: 1px solid #f6f6f6;
+    &:not(:last-child) {
+      margin-bottom: rem(24);
+    }
+
+
     &-title {
       margin-bottom: 0;
     }
@@ -46,6 +55,14 @@
       width: 100%;
       justify-content: space-between;
       column-gap: rem(24);
+      text-align: left;
+      background-color: transparent !important;
+      border: none;
+
+      &:hover, &:active {
+        background-color: transparent !important;
+        color: var(--dark-gray) !important;
+      }
 
       &.is-active {
         .faq-section__item-button-icon {
