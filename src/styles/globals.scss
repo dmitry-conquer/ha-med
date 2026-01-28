@@ -18,6 +18,12 @@ body {
     color: var(--light-gray);
     line-height: 1.77;
   }
+
+  @include large {
+    br {
+      display: none !important;
+    }
+  }
 }
 
 .section-container {
